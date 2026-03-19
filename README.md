@@ -29,8 +29,7 @@ This architecture ensures predictions are not merely statistically likely but ph
 ## 🚀 Architecture overview
 
 TFFM progressively narrows the diagnostic scope from global leak detection (Look 1), to regional sub-partition isolation (Look 2), and finally to precise nodal pinpointing (Look 3), establishing a scale-invariant "glass-box" interpretability.
-
-*(Optional: Insert `figures/tffm_framework_overview.png` and `figures/tffm_localization_cascade.png` here)*
+![Overall Network Architecture](figure/framework.png)
 
 
 ---
@@ -56,6 +55,7 @@ TFFM exhibits remarkable resilience, maintaining 96.5% localization accuracy eve
 - Python 3.8+
 - PyTorch (>= 2.0.0)
 - EPANET 2.2
+- CUDA 11.8
 - Other dependencies in `requirements.txt`
 
 Clone the repo and install dependencies:
@@ -116,15 +116,7 @@ TFFM-WaterNetwork/
 
 ## 🏷️ Citation
 
-If you find this project useful for your research, please consider citing our paper:
-```bibtex
-@article{TFFM_WaterNetwork_2026,
-    title={Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization},
-    author={Your Name and Collaborator Names},
-    journal={CVPR (or other journal/conference)},
-    year={2026}
-}
-```
+waiting to continue
 
 ---
 
@@ -134,4 +126,4 @@ This project is released under the [MIT License](LICENSE). See the LICENSE file 
 ---
 
 ## 👏 Acknowledgement
-We extend our gratitude to the PyTorch team and the contributors of EPANET frameworks which greatly facilitated this research into intelligent water distribution systems.
+We extend our gratitude to the PyTorch team and the contributors of EPANET frameworks which greatly facilitated this research into intelligent WDNs.
