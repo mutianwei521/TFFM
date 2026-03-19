@@ -41,7 +41,7 @@ TFFM progressively narrows the diagnostic scope from global leak detection (Look
 TFFM was rigorously evaluated across six benchmark water distribution networks, ranging from the small tutorial `Net1` to the real-world municipal scale `City H` (920 junctions).
 
 <p align="center">
-  <img src="figure/network_performance_bar1.png" alt="Figure: Hierarchical Look-Thrice Performance Overview" width="90%"/>
+  <img src="figure/network_performance_bar.png" alt="Figure: Hierarchical Look-Thrice Performance Overview" width="90%"/>
   <br/>
   <em><b>Figure: Hierarchical Look-Thrice performance overview at optimal K.</b> (a) Look 1: Global detection AUC-ROC = 1.000 across all networks; (b) Look 2: Regional localization ≥ 95%; (c) Look 3: Node-level exact-match and ±1-hop accuracy.</em>
 </p>
