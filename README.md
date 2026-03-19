@@ -4,8 +4,6 @@
 
 </div>
 
-Tianwei Mu, 
-Guangzhou Institute of Industrial Intelligence
 
 This is the official code for the paper **Physics-Informed Graph Intelligence Enables Interpretable Leak Localization in Water Distribution Networks**.
 
