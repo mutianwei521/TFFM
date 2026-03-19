@@ -70,14 +70,14 @@ By progressively narrowing the searching space, TFFM retains extremely high accu
 ### 3. Noise Robustness and Computational Efficiency
 TFFM exhibits remarkable resilience to sensor noise, maintaining high node-level accuracy (>81%) on the massive `City H` network even at high noise levels (e.g. 5% to 10% pressure disruption). 
 
-Furthermore, the inference time is exceptionally efficient: For the largest `City H` network, real-time prediction completes in an average total time of just **2.36 ± 1.57 ms**, enabling immediate operational responses across the entire municipal WDN.
+Furthermore, the inference time (RTX-5060 laptop) is exceptionally efficient: For the largest `City H` network, real-time prediction completes in an average total time of just **2.36 ± 1.57 ms**, enabling immediate operational responses across the entire municipal WDN.
 
 ---
 
 ## 🛠️ Getting Started
 
 ### 1. Prerequisites
-- Python 3.8+
+- Python 3.9+
 - PyTorch (>= 2.0.0)
 - EPANET 2.2
 - CUDA > 12
