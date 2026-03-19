@@ -108,7 +108,7 @@ Or use custom parameters (e.g., number of scenario data augmentations):
 ```bash
 python main.py --mode train --n-scenarios 5000
 ```
-This script handles the end-to-end composite loss optimization for the Global Adaptor, regional LTFM layers, VT Selector, and finally the Physics-Informed Node Localizer.
+This script handles the end-to-end composite loss optimization for the Global Adaptor, regional LTFM layers, GRS, and finally the Physics-Informed Node Localizer.
 
 ### 4. Evaluation & Inference
 During inference, TFFM applies its "Look-Thrice" cascade seamlessly.
@@ -131,7 +131,7 @@ TFFM-WaterNetwork/
 ├── output/                # Evaluation output and results
 ├── src/                   # Core TFFM source code
 │   ├── data/              # Hydraulic data processors and EPANET wrapper
-│   ├── models/            # TFFM models: Adaptor, LTFM Layers, VT Selector, PINL
+│   ├── models/            # TFFM models: Adaptor, LTFM Layers, GRS, PINL
 │   ├── training/          # Composite loss functions and trainer logic
 │   ├── inference/         # Prediction engine
 │   └── utils/             # Graph2Vec encoders, FCM Partitioning
