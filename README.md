@@ -1,11 +1,11 @@
 <div align="center">
 <h1>Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization</h1>
 
-[**[Paper]**]() [**[Project Page]**]() [**[Code]**]()
+[**[Paper]**]() [**[Code]**]()
 
 </div>
 
-This is the official PyTorch implementation for the paper **Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization**.
+This is the official code for the paper **Physics-Informed Graph Intelligence Enables Interpretable Leak Localization in Water Distribution Networks**.
 
 We introduce **Tri-Focus Feature Matching (TFFM)**, a transformative Physics-Informed Graph Intelligence framework that embeds rigorous hydraulic constraints directly into the neural computation graph. TFFM acts as a "glass-box", solving the notoriously difficult inverse problem of leakage localization in Water Distribution Networks (WDNs).
 
@@ -13,7 +13,6 @@ We introduce **Tri-Focus Feature Matching (TFFM)**, a transformative Physics-Inf
 
 ## 🌟 News
 - **[2026.03.18]** Code and pre-trained models are officially released!
-- **[2026.03]** Our paper has been submitted/accepted for publication.
 
 ---
 
