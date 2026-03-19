@@ -80,7 +80,7 @@ Furthermore, the inference time is exceptionally efficient: For the largest `Cit
 - Python 3.8+
 - PyTorch (>= 2.0.0)
 - EPANET 2.2
-- CUDA 11.8
+- CUDA > 12
 - Other dependencies in `requirements.txt`
 
 Clone the repo and install dependencies:
