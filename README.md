@@ -43,7 +43,7 @@ TFFM was rigorously evaluated across six benchmark water distribution networks, 
 <p align="center">
   <img src="figure/network_performance_bar.png" alt="Figure: Hierarchical Look-Thrice Performance Overview" width="90%"/>
   <br/>
-  <em><b>Fig. 3 Hierarchical Look-Thrice performance overview at optimal K.</b> (a) Look 1: Global detection AUC-ROC = 1.000 across all networks; (b) Look 2: Regional localization ≥ 95%; (c) Look 3: Node-level exact-match and ±1-hop accuracy.</em>
+  <em><b>Figure: Hierarchical Look-Thrice performance overview at optimal K.</b> (a) Look 1: Global detection AUC-ROC = 1.000 across all networks; (b) Look 2: Regional localization ≥ 95%; (c) Look 3: Node-level exact-match and ±1-hop accuracy.</em>
 </p>
 
 ### 1. Superior Localization Accuracy
