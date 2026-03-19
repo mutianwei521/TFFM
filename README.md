@@ -1,13 +1,11 @@
 <div align="center">
-<h1>Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization</h1>
+<h1>Physics-Informed Graph Intelligence Enables Interpretable Leak Localization in Water Distribution Networks</h1>
 Tianwei Mu, Guangzhou Institute of Industrial Intelligence
 
 [**[Paper]**]() [**[Project Page]**](https://github.com/mutianwei521/TFFM)
 
 </div>
 
-
-This is the official code for the paper **Physics-Informed Graph Intelligence Enables Interpretable Leak Localization in Water Distribution Networks**.
 
 We introduce **Tri-Focus Feature Matching (TFFM)**, a transformative Physics-Informed Graph Intelligence framework that embeds rigorous hydraulic constraints directly into the neural computation graph. TFFM acts as a "glass-box", solving the notoriously difficult inverse problem of leakage localization in Water Distribution Networks (WDNs).
 
