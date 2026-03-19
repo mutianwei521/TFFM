@@ -1,6 +1,7 @@
 <div align="center">
 <h1>Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization</h1>
-Tianwei Mu, Guangzhou Institute of Industrial Intelligence
+Tianwei Mu
+Guangzhou Institute of Industrial Intelligence
 
 [**[Paper]**]() [**[Project Page]**](https://github.com/mutianwei521/TFFM)
 
