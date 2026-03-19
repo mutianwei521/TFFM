@@ -97,7 +97,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Data Preparation
-For default execution, the network topologies (e.g., `Net1.inp` or `L-Town.inp`) and configurations are specified via `config.yaml`.
+For default execution, the network topologies (e.g., `Net1.inp` or `EXA5.inp`) and configurations are specified via `config.yaml`.
 - Ensure your structural graph representations and hydraulic simulations are properly placed in `data/`.
 - Perform the Phase I Offline Initialization by calculating the sensitivity matrix.
 
@@ -108,7 +108,7 @@ python main.py --mode train
 ```
 Or use custom parameters (e.g., number of scenario data augmentations):
 ```bash
-python main.py --mode train --n-scenarios 1000
+python main.py --mode train --n-scenarios 5000
 ```
 This script handles the end-to-end composite loss optimization for the Global Adaptor, regional LTFM layers, VT Selector, and finally the Physics-Informed Node Localizer.
 
