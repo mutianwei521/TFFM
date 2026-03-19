@@ -1,10 +1,11 @@
 <div align="center">
 <h1>Bridging Physics and Data: A Hierarchical Graph Intelligence for Water Leak Localization</h1>
-Tianwei Mu, 
-Guangzhou Institute of Industrial Intelligence
 [**[Paper]**]() [**[Code]**]()
 
 </div>
+
+Tianwei Mu, 
+Guangzhou Institute of Industrial Intelligence
 
 This is the official code for the paper **Physics-Informed Graph Intelligence Enables Interpretable Leak Localization in Water Distribution Networks**.
 
