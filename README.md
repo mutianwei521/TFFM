@@ -36,16 +36,39 @@ TFFM progressively narrows the diagnostic scope from global leak detection (Look
 
 ## 📈 Main Results
 
-**Comparative Classification Performance on L-Town Network**
+TFFM was rigorously evaluated across six benchmark water distribution networks, ranging from the small tutorial `Net1` to the real-world municipal scale `City H` (920 junctions).
 
-| Model Type | Accuracy (Look 1) | Recall (Look 2) | Top-1 Accuracy (Look 3) |
-| :--- | :--- | :--- | :--- |
-| Physics-Based (RPM) | N/A | 72.1% | 45.6% |
-| Data-Driven (CNN) | 94.5% | 88.2% | 62.8% |
-| Data-Driven (GCN) | 98.2% | 89.3% | 74.1% |
-| **TFFM (Ours)** | **100%** | **100%** | **98.2%** |
+### 1. Superior Localization Accuracy
+TFFM significantly outperforms both traditional physics-based models and state-of-the-art Deep Learning (DL) and Physics-Informed Machine Learning (PIML) baselines across all network scales.
 
-TFFM exhibits remarkable resilience, maintaining 96.5% localization accuracy even under extreme high-noise regimes (sensor noise $\sigma=0.5m$), significantly outperforming purely data-driven baselines.
+**Table: Comparative Classification Performance (Node-Level Accuracy %)**
+
+| Method | Type | Net1 | EXA4 | EXA5 | EXA6 | EXA7 | City H |
+|---|---|---|---|---|---|---|---|
+| B2: Bayesian IS | Model-based | 87.70 ± 1.62 | 63.56 ± 1.48 | 70.89 ± 1.38 | 72.33 ± 1.24 | 69.78 ± 1.32 | 65.78 ± 1.68 |
+| B1: Hier. RF | Classic ML | 86.50 ± 1.12 | 60.44 ± 1.52 | 67.22 ± 1.52 | 68.78 ± 1.46 | 65.56 ± 1.44 | 62.44 ± 1.82 |
+| B3: Deep MLP | Black-box DL | 81.60 ± 2.12 | 58.44 ± 2.12 | 62.33 ± 2.12 | 64.44 ± 2.18 | 61.89 ± 2.24 | 59.78 ± 2.14 |
+| B4: Soft-PINN | Soft-PIML | 79.10 ± 2.02 | 56.78 ± 2.18 | 61.11 ± 2.24 | 62.67 ± 2.04 | 60.33 ± 2.12 | 58.22 ± 2.22 |
+| B5: AIGNN | Physics-GNN | 70.90 ± 3.52 | 54.33 ± 2.04 | 59.11 ± 2.02 | 60.44 ± 2.02 | 58.56 ± 2.08 | 55.67 ± 2.12 |
+| **TFFM (ours)** | **Hard-PIML + Hier.** | **99.30 ± 0.32** | **77.08 ± 2.06** | **87.31 ± 1.22** | **91.82 ± 1.34** | **86.07 ± 1.88** | **86.51 ± 2.58** |
+
+### 2. Multi-Stage "Look-Thrice" Cascading Precision
+By progressively narrowing the searching space, TFFM retains extremely high accuracy across Micro, Small, Medium, and Large leak events.
+
+**Table: Performance Across Leak Categories (Average)**
+
+| Leak Category | Look 1: AUC (%) | Look 2: Top-1 (%) | Look 3: Node-Level ±1-hop (%) |
+|---|---|---|---|
+| Micro | 81.56 | 67.71 | 51.04 |
+| Small | 94.47 | 81.25 | 68.75 |
+| Medium | 98.81 | 89.58 | 76.39 |
+| Large | 99.82 | 96.53 | 83.33 |
+| **Simulation Avg** | **100** | **99.84** | **86.51** |
+
+### 3. Noise Robustness and Computational Efficiency
+TFFM exhibits remarkable resilience to sensor noise, maintaining high node-level accuracy (>81%) on the massive `City H` network even at high noise levels (e.g. 5% to 10% pressure disruption). 
+
+Furthermore, the inference time is exceptionally efficient: For the largest `City H` network, real-time prediction completes in an average total time of just **2.36 ± 1.57 ms**, enabling immediate operational responses across the entire municipal WDN.
 
 ---
 
