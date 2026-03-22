@@ -1,69 +1,69 @@
-# 供水管网漏损检测系统配置文件
+# Water Distribution Network Leak Detection System Configuration
 
-# 数据路径配置
+# Data path configuration
 data:
-  epanet_file: "data/Exa7.inp"     # EPANET网络文件路径
-  output_dir: "output/"            # 输出目录
-  log_dir: "logs/"                 # 日志目录
+  epanet_file: "data/Exa7.inp"     # EPANET network file path
+  output_dir: "output/"            # Output directory
+  log_dir: "logs/"                 # Log directory
 
-# 水力计算配置
+# Hydraulic simulation configuration
 hydraulic:
-  simulation_hours: 24             # 模拟时间（小时）
-  time_step: 1                     # 时间步长（小时）
-  demand_reduction_ratio: 0.03      # 异常需水量比例（20%）
+  simulation_hours: 24             # Simulation duration (hours)
+  time_step: 1                     # Time step (hours)
+  demand_reduction_ratio: 0.03      # Anomalous demand ratio (20%)
   
-# FCM分区配置（仅用于训练时分区）
+# FCM partitioning configuration (used for partitioning during training)
 fcm:
-  n_clusters: 4                    # 分区数量
-  max_iter: 100                    # 最大迭代次数
-  error: 1e-5                      # 收敛误差
-  m: 1.5                           # 模糊指数
-  k_nearest: 10                    # KNN参数（用于离群点检测）
-  outliers_detection: false         # 是否进行离群点检测
-  seed: 42                         # 随机种子
+  n_clusters: 4                    # Number of partitions
+  max_iter: 100                    # Maximum iterations
+  error: 1e-5                      # Convergence error
+  m: 1.5                           # Fuzziness exponent
+  k_nearest: 10                    # KNN parameter (for outlier detection)
+  outliers_detection: false         # Whether to perform outlier detection
+  seed: 42                         # Random seed
 
-# Graph2Vec配置
+# Graph2Vec configuration
 graph2vec:
-  dimensions: 128                  # 嵌入维度
-  workers: 4                       # 并行工作数
-  epochs: 10                       # 训练轮数
-  min_count: 5                     # 最小词频
-  learning_rate: 0.025             # 学习率
+  dimensions: 128                  # Embedding dimensions
+  workers: 4                       # Number of parallel workers
+  epochs: 10                       # Training epochs
+  min_count: 5                     # Minimum word frequency
+  learning_rate: 0.025             # Learning rate
 
-# LTFM模型配置
+# LTFM model configuration
 ltfm:
-  embedding_dim: 64                # 嵌入维度（进一步减小）
-  hidden_dim: 128                  # 隐藏层维度（进一步减小）
-  num_heads: 4                     # 注意力头数（减半）
-  num_layers: 2                    # 层数（减半）
-  dropout: 0.3                     # Dropout率（增加正则化）
+  embedding_dim: 64                # Embedding dimension (further reduced)
+  hidden_dim: 128                  # Hidden layer dimension (further reduced)
+  num_heads: 4                     # Number of attention heads (halved)
+  num_layers: 2                    # Number of layers (halved)
+  dropout: 0.3                     # Dropout rate (increased regularization)
 
-# NodeLocalizer配置（节点级漏损定位）
+# NodeLocalizer configuration (node-level leak localization)
 node_localizer:
-  hidden_dim: 128                  # 隐藏层维度 (减小以防止过拟合)
-  dropout: 0.5                     # Dropout率 (增加以防止过拟合)
-  epochs: 100                      # 训练轮数
-  learning_rate: 0.0001            # 学习率 (降低以微调物理偏置)
+  hidden_dim: 128                  # Hidden layer dimension (reduced to prevent overfitting)
+  dropout: 0.5                     # Dropout rate (increased to prevent overfitting)
+  epochs: 100                      # Training epochs
+  learning_rate: 0.0001            # Learning rate (lowered for fine-tuning physics bias)
   
-# 训练配置
+# Training configuration
 training:
-  batch_size: 128                   # 批次大小（利用GPU并行加速）
-  learning_rate: 0.001             # 学习率
-  epochs: 50                       # 训练轮数
-  weight_decay: 0.001              # 权重衰减
-  early_stopping_patience: 20      # 早停耐心值
-  
-# 推理配置
-inference:
-  threshold: 0.5                   # 异常检测阈值
-  confidence_threshold: 0.8        # 置信度阈值
+  batch_size: 128                   # Batch size (leveraging GPU parallelism)
+  learning_rate: 0.001             # Learning rate
+  epochs: 50                       # Training epochs
+  weight_decay: 0.001              # Weight decay
+  early_stopping_patience: 20      # Early stopping patience
 
-# 设备配置
+# Inference configuration
+inference:
+  threshold: 0.5                   # Anomaly detection threshold
+  confidence_threshold: 0.8        # Confidence threshold
+
+# Device configuration
 device:
-  use_cuda: true                   # 是否使用CUDA
+  use_cuda: true                   # Whether to use CUDA
   gpu_id: 0                        # GPU ID
 
-# 日志配置
+# Logging configuration
 logging:
-  level: "INFO"                    # 日志级别
+  level: "INFO"                    # Log level
   format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
